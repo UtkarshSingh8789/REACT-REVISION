@@ -72,4 +72,3 @@
 // project 1 fetch the api (https://jsonplaceholder.typicode.com/todos/) and create 4 button buton 1 have todos of id 1 and buton 2 have todos of id 2 and so on...
 // when there is loading show loading if the result come then show the result;
 
-import {  } from "react";
