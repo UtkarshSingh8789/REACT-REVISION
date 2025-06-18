@@ -66,13 +66,31 @@
 //   )
 // }
 // export default App;
+
+// USE EFFECT HOOK CONCEPT
+
+// import React from "react";
+// import EffectHook from "../hooks/useEffect.jsx";
+// function App() {
+//   return (
+//     <>
+//     <div>
+//       <EffectHook/>
+//     </div>
+//     </>
+//   )
+// }
+// export default App;
+
+// USEREF CONCEPT IN DETAIL
+
 import React from "react";
-import EffectHook from "../hooks/useEffect.jsx";
+import Clock from "../hooks/useRef/code1.jsx";
 function App() {
   return (
     <>
     <div>
-      <EffectHook/>
+      <Clock/>
     </div>
     </>
   )
