@@ -52,6 +52,7 @@ import { useState,useEffect } from "react";
 // }
 // export default useFetch
 
+
 // METHOD-2 USING INLINE FETCH 
 
 
