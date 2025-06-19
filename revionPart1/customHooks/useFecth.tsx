@@ -58,9 +58,9 @@ import { useState,useEffect } from "react";
 
 
 function useFetch(url:string) {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<Error | null>(null);
   useEffect(() => {
     setLoading(true);
     fetch(url)
