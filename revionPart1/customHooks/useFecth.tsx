@@ -28,26 +28,56 @@
 
 import { useState,useEffect } from "react";
 
-function useFetch(url:string){
-    const [loading,setLoading]=useState(true);
-    const [data,setData]=useState(null);
-    const [error,setError]=useState<Error | null>(null);
-    useEffect(()=>{
-        const fetchData=async ()=>{
-            try {
-                setLoading(true);
-                const response=await fetch(url);
-                const result=await response.json();
-                setData(result);
-            } catch (error) {
-                setError(error as Error);
-            } finally{
-                setLoading(false);
-            }
+// function useFetch(url:string){
+//     const [loading,setLoading]=useState(true);
+//     const [data,setData]=useState(null);
+//     const [error,setError]=useState<Error | null>(null);
+//     useEffect(()=>{
+//         const fetchData=async ()=>{
+//             try {
+//                 setLoading(true);
+//                 const response=await fetch(url);
+//                 const result=await response.json();
+//                 setData(result);
+//             } catch (error) {
+//                 setError(error as Error);
+//             } finally{
+//                 setLoading(false);
+//             }
 
-        }
-        fetchData();
-    },[url])
-    return {loading,data,error}
+//         }  
+//         fetchData(); // we are using async funtion to feth the api so we have to call this function;
+//     },[url])
+//     return {loading,data,error}
+// }
+// export default useFetch
+
+// METHOD-2 USING INLINE FETCH 
+
+
+
+function useFetch(url:string) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  useEffect(() => {
+    setLoading(true);
+    fetch(url)
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to fetch');
+        return res.json();
+      })
+      .then(data => {
+        setData(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        setError(err.message);
+        setLoading(false);
+      });
+  }, [url]);
+
+  return { data, loading, error };
 }
-export default useFetch
+
+export default useFetch;
