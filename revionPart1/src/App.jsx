@@ -122,11 +122,24 @@
 // export default App;
 
 
-import Parent from "../contextApi/rollingUpTheStates.jsx";
+// import Parent from "../contextApi/rollingUpTheStates.jsx";
+// function App(){
+//   return (
+//     <div>
+//       <Parent/>
+//     </div>
+//   )
+// }
+// export default App;
+
+import { useState } from "react";
+import { LightBulb,LightSwitch } from "../contextApi/PropDrilling.jsx";
 function App(){
+  const [isLightOn,setIsLightOn]=useState(false);
   return (
     <div>
-      <Parent/>
+      <LightBulb isLightOn={isLightOn}/>
+      <LightSwitch isLightOn={isLightOn} setIsLightOn={setIsLightOn}/>
     </div>
   )
 }
