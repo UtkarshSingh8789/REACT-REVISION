@@ -6,7 +6,7 @@ function LightBulb({ isLightOn }) {
   return <div>The light is {isLightOn ? 'ON' : 'OFF'}</div>;
 }
 
-function LightSwitch({ isLightOn, setIsLightOn }) {
+function LightSwitch({setIsLightOn }) {
   return (
     <div>
       <button onClick={() => setIsLightOn(prev => !prev)}>SWITCH</button>
