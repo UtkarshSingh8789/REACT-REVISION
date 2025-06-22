@@ -48,3 +48,9 @@ function Value() {
   return <p>Count: {count}</p>;
 }
 export default Parent
+
+
+// THEORY-> 
+
+// The Context API primarily addresses the issue of prop drilling by allowing you to share state across your component tree without needing to pass props through every level.
+// It doesn’t optimise renders in your application, which becomes important if/when your application becomes bigger
