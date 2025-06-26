@@ -146,13 +146,24 @@
 // export default App;
 
 
-import Parent from "../contextApi/contextApi.jsx";
+// import Parent from "../contextApi/contextApi.jsx";
+// function App(){
+//   return (
+//     <div>
+//       <Parent/>
+//     </div>
+//   )
+// }
+// export default App;
+
+// recoil concept;
+
+import Par from "../stateManagement/recoil.jsx";
 function App(){
   return (
     <div>
-      <Parent/>
+      <Par/>
     </div>
   )
 }
 export default App;
-
