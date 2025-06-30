@@ -158,12 +158,26 @@
 
 // recoil concept;
 
-import Par from "../stateManagement/recoil.jsx";
+// import Par from "../stateManagement/recoil.jsx";
+// function App(){
+//   return (
+//     <div>
+//       <Par/>
+//     </div>
+//   )
+// }
+// export default App;
+
+// REDUX TOOLKIT CONCEPT
+
+import CounterApp from "../stateManagement/redux.jsx";
 function App(){
   return (
     <div>
-      <Par/>
+      <CounterApp/>
     </div>
   )
 }
 export default App;
+
+
